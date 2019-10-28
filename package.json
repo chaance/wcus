@@ -1,0 +1,32 @@
+{
+  "name": "wcus-demo",
+  "version": "1.0.0",
+  "description": "Demo WordPress project for my WordCamp US workshop 👩‍💻",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chancestrickland/wcus-demo"
+  },
+  "author": "Chance Strickland <hi@chancedigital.io>",
+  "license": "GPL-3.0",
+  "scripts": {
+    "setup": "yarn && composer install && composer install-codestandards"
+  },
+  "devDependencies": {
+    "@wordpress/eslint-plugin": "3.1.0",
+    "babel-eslint": "10.0.3",
+    "eslint": "6.5.1",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jest": "22.20.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react-hooks": "2.1.2",
+    "eslint-plugin-wpcalypso": "4.1.0",
+    "prettier": "git+https://github.com/chancedigital/wp-prettier#wp-prettier-1.18.2"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "parenSpacing": true,
+    "trailingComma": "all"
+  }
+}

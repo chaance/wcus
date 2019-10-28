@@ -1,0 +1,64 @@
+# ignore everything in the WP root except our project files
+/public/*
+!/public/wp-content
+/public/wp-content/*.*
+/public/wp-content/*/*
+!/public/wp-content/*/wcus-demo*
+
+# development files
+/sql
+node_modules/
+dist/
+vendor/
+.next
+.cache
+.vscode
+*.log
+*.sql
+*.sqlite
+.svn
+*.bak
+
+# os stuff
+*~
+.DS_Store
+Thumbs.db
+*.swp
+
+# secrets
+.env
+.env.*
+
+# large + disallowed files
+*.3gpp
+*.3gp
+*.asf
+*.asx
+*.avi
+*.bin
+*.deb
+*.dll
+*.dmg
+*.exe
+*.flv
+*.hqx
+*.img
+*.iso
+*.kar
+*.m4a
+*.m4v
+*.mid
+*.midi
+*.mng
+*.mov
+*.mp3
+*.mp4
+*.mpeg
+*.mpg
+*.msi
+*.msm
+*.msp
+*.ogg
+*.ra
+*.webm
+*.wmv

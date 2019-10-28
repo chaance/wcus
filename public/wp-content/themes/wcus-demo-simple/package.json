@@ -1,0 +1,12 @@
+{
+  "name": "wcus-demo-theme-simple",
+  "version": "1.0.0",
+  "description": "Demo WordPress project for my WordCamp US workshop 👩‍💻",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Chance Strickland <hi@chancedigital.io>",
+  "license": "GPL-3.0",
+  "dependencies": {},
+  "devDependencies": {}
+}

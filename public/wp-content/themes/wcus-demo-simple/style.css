@@ -1,0 +1,34 @@
+/**
+ * Theme Name:  WCUS Demo Theme (Simple)
+ * Theme URI:   https://chancedigital.io
+ * Description: Demo WordPress project for my WordCamp US workshop 👩‍💻
+ * Author:      Chance Strickland
+ * Author URI:  https://chancedigital.io
+ * Version:     1.0.0
+ * Text Domain: wcus-demo-simple
+ */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+.page-index {
+	background: lightpink;
+}

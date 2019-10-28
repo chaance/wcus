@@ -1,0 +1,25 @@
+{
+  "name": "chancestrickland/wcus-demo",
+  "description": "Demo WordPress project for my WordCamp US workshop 👩‍💻",
+  "license": "GPL-3.0-or-later",
+  "require-dev": {
+    "composer/installers": "~1.0",
+    "wp-coding-standards/wpcs": "^2",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5"
+  },
+  "config": {
+    "platform": {
+      "php": "7.3"
+    }
+  },
+  "scripts": {
+    "setup": [
+      "@install-codestandards"
+    ],
+    "install-codestandards": [
+      "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
+    ],
+    "lint": "phpcs .",
+    "lint-fix": "phpcbf ."
+  }
+}

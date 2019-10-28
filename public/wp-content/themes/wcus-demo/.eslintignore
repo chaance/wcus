@@ -1,0 +1,6 @@
+assets/js/_vendor
+assets/js/admin/_vendor
+assets/js/frontend/_vendor
+assets/js/shared/_vendor
+tests
+dist/**/*

@@ -1,0 +1,18 @@
+{
+  "name": "chancedigital/wcus-demo-theme",
+  "type": "wordpress-theme",
+  "description": "Demo WordPress project for my WordCamp US workshop 👩‍💻",
+  "require": {
+    "vlucas/phpdotenv": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Chance_Digital\\WCUS_Demo\\Theme\\": "inc"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.3"
+    }
+  }
+}
