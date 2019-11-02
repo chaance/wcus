@@ -21,6 +21,7 @@
 
 	<!-- Include everything in the Extra standard, with exclusions -->
 	<rule ref="WordPress-Extra">
+		<exclude name="WordPress.Security" />
 		<exclude name="WordPress.WP.GlobalVariablesOverride.OverrideProhibited" />
 		<exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma" />
 		<exclude name="WordPress.WP.EnqueuedResourceParameters.MissingVersion" />

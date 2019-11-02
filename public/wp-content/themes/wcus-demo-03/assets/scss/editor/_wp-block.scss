@@ -1,0 +1,85 @@
+body .wp-block[data-align="full"],
+body .wp-block[data-type="wcus-demo/hero"],
+body .wp-block[data-type="wcus-demo/cta-form"] {
+	width: 100%;
+}
+
+.wp-block {
+	line-height: var( --line-height-body );
+	font-size: var( --font-size-std );
+	font-family: var( --font-family-sans );
+	color: var( --color-black );
+	width: calc( 100vw - ( 2 * var( --grid-gap ) ) );
+	max-width: 100%;
+
+	@media only screen and ( min-width: 768px ) {
+		width: calc( 8 * ( 100vw / 12 ) );
+	}
+
+	@media only screen and ( min-width: 1168px ) {
+		width: calc( 6 * ( 100vw / 12 ) );
+	}
+
+	.wp-block {
+		width: 100%;
+	}
+
+	a {
+		color: var( --color-primary );
+		transition: filter 200ms ease-out;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	[type="text"],
+	[type="password"],
+	[type="date"],
+	[type="datetime"],
+	[type="datetime-local"],
+	[type="month"],
+	[type="week"],
+	[type="email"],
+	[type="number"],
+	[type="search"],
+	[type="tel"],
+	[type="time"],
+	[type="url"],
+	[type="color"],
+	textarea {
+		&:not( .editor-post-title__input ) {
+			box-sizing: border-box;
+			appearance: none;
+			display: block;
+			width: 100%;
+			margin: 0 0 var( --grid-gap );
+			padding: 0.5rem;
+			border: 1px solid var( --color-gray-70 );
+			border-radius: 0;
+			background: var( --color-white );
+			box-shadow: 0 0 0 0 rgba( 22, 19, 29, 0 );
+			font-family: inherit;
+			font-size: var( --font-size-std );
+			font-weight: var( --font-weight-light );
+			line-height: var( --line-height-body );
+			color: var( --color-black );
+			transition: all 200ms ease-out;
+		}
+
+		.wp-caption-text {
+			padding: 2px 6px 4px;
+			font-size: 12px;
+			font-style: italic;
+			font-weight: 400;
+		}
+
+		p,
+		li,
+		ul,
+		ol {
+			margin: 0.875em 0;
+		}
+	}
+}

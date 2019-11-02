@@ -1,0 +1,45 @@
+.wcus-header-nav {
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		@media screen and ( min-width: 992px ) {
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+	}
+
+	&__item {
+		margin: 0.5em 0;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		@media screen and ( min-width: 992px ) {
+			margin: 0 1rem;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__link {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}

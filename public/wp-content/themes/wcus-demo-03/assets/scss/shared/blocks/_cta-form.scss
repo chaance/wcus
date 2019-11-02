@@ -1,0 +1,30 @@
+.wcus-block-cta-form {
+	background-color: var( --color-primary );
+	background-image: linear-gradient(
+		180deg,
+		var( --color-primary ) 0,
+		var( --color-primary-dark ) 100%
+	);
+	color: var( --color-white );
+	padding: calc( var( --grid-gap ) * 2 ) 0;
+	text-align: center;
+
+	&__container {
+		width: var( --full-width );
+		max-width: var( --container-width );
+		margin: 0 auto;
+
+		@media screen and ( min-width: 768px ) {
+			max-width: calc( var( --container-width ) / 2 );
+		}
+	}
+
+	&__label-wrap {
+		display: block;
+		text-align: left;
+	}
+
+	&__submit {
+		border-color: var( --color-white );
+	}
+}

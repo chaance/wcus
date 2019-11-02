@@ -1,0 +1,55 @@
+
+.wcus-block-hero {
+	padding: calc( var( --grid-gap ) * 2 ) 0;
+	background: linear-gradient(
+		50deg,
+		#fff 30%,
+		rgba(243, 215, 193, 0.25) 65%,
+		rgba(255, 152, 73, 0.3) 100%
+	);
+
+	&__container {
+		width: var( --full-width );
+		max-width: var( --container-width );
+		margin: 0 auto;
+		display: grid;
+		grid-template: "text" auto / "img" 1fr / 1fr;
+		gap: var( --grid-gap );
+
+		@media screen and ( min-width: 768px ) {
+			grid-template: "text img" auto / 1fr 1fr;
+
+			> * {
+				align-self: center;
+			}
+		}
+	}
+
+	&__buttons {
+		.wcus-button:not( :last-of-type ) {
+			margin-right: calc( var( --grid-gap ) / 2 );
+		}
+	}
+
+	&__title {
+		span,
+		strong {
+			display: inline-block;
+			position: relative;
+			font-weight: var( --font-weight-bold );
+
+			&::after {
+				content: "";
+				background-image: url( "../img/underline.svg" );
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				display: block;
+				position: absolute;
+				top: 93%;
+				left: 0;
+				width: 100%;
+				height: 0.25em;
+			}
+		}
+	}
+}

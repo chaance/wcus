@@ -1,0 +1,67 @@
+.wcus-button {
+	appearance: none;
+	display: inline-block;
+	padding: 0.8em 1.25em;
+	border: 2px solid transparent;
+	font-size: var( --font-size-sm );
+	font-weight: var( --font-weight-bold );
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: rgb(22, 19, 29);
+	box-shadow: none;
+	text-shadow: none;
+	border-radius: 999px;
+	line-height: 1;
+	text-decoration: none;
+	text-align: center;
+	transition: all 200ms ease-out;
+	margin: 0.5em 0;
+
+	&:hover {
+		filter: brightness( 150% );
+	}
+
+	&--primary {
+		background-color: var( --color-primary );
+		border-color: var( --color-primary );
+		color: var( --color-white );
+		box-shadow: 0 2px 4px 0 rgba( 22, 19, 29, 0.2 );
+	}
+
+	&--secondary {
+		background-color: var( --color-secondary );
+		border-color: var( --color-secondary );
+		color: var( --color-white );
+		box-shadow: 0 2px 4px 0 rgba( 22, 19, 29, 0.2 );
+	}
+
+	&--secondary:hover {
+		filter: brightness( 80% ) contrast( 170% ) saturate( 80% );
+	}
+
+	&--neutral {
+		background-color: var( --color-gray-50 );
+		border-color: var( --color-gray-50 );
+		color: var( --color-white );
+		box-shadow: 0 2px 4px 0 rgba( 22, 19, 29, 0.2 );
+	}
+
+	&--neutral:hover {
+		filter: none;
+		background-color: var( --color-gray-70 );
+		border-color: var( --color-gray-70 );
+	}
+
+	&--primary:hover,
+	&--primary:focus,
+	&--secondary:hover,
+	&--secondary:focus,
+	&--neutral:hover,
+	&--neutral:focus {
+		box-shadow: 0 2px 4px 0 rgba( 22, 19, 29, 0.375 );
+	}
+
+	@media screen and ( min-width: 992px ) {
+		padding: 0.8em 1.825em;
+	}
+}

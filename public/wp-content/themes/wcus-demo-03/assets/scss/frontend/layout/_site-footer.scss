@@ -1,0 +1,10 @@
+.wcus-site-footer {
+	padding: calc( var( --grid-gap ) / 2 ) var( --grid-gap );
+	text-align: center;
+	background: var( --color-tertiary );
+	color: var( --color-white );
+
+	a {
+		color: inherit;
+	}
+}

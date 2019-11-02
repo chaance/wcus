@@ -1,0 +1,75 @@
+.wcus-site-header {
+	display: grid;
+	grid-template: "logo menu" auto / 6.5rem 1fr;
+	gap: var( --grid-gap );
+	padding: calc( var( --grid-gap ) / 2 ) var( --grid-gap );
+
+	> * {
+		align-self: center;
+	}
+
+	&__logo-link {
+		display: flex;
+		width: 100%;
+	}
+
+	&__logo {
+		width: 100%;
+	}
+
+	&__nav-wrapper {
+		grid-area: menu;
+		text-align: right;
+		position: relative;
+	}
+
+	&__nav-trigger {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		display: inline-block;
+		position: relative;
+		background: url( "../img/burger.svg" );
+		background-size: 60% 60%;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 2rem;
+		height: 2rem;
+		box-shadow: none;
+		padding: 0;
+		border: 0;
+		outline: 0;
+
+		@media screen and ( min-width: 992px ) {
+			display: none;
+		}
+
+		&:focus {
+			outline: var( --focus-ring );
+
+			&:not( :focus-visible ) {
+				outline: none;
+			}
+		}
+	}
+
+
+	&__nav {
+		display: none;
+		position: absolute;
+		background: white;
+		padding: calc( var( --grid-gap ) / 2 );
+		z-index: 1;
+		right: 0;
+		top: 100%;
+
+		@media screen and ( min-width: 992px ) {
+			display: block;
+			position: static;
+			background: 0;
+			z-index: initial;
+			top: initial;
+			right: initial;
+		}
+	}
+}

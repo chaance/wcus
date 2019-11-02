@@ -1,0 +1,56 @@
+:root {
+	--grid-gap: 1rem;
+	--font-size-sm: 0.825rem;
+	--font-size-std: 1rem;
+	--font-size-lg: 1.125rem;
+	--font-size-xl: 1.425rem;
+	--font-size-xxl: 1.625rem;
+	--font-size-xxxl: 1.75rem;
+	--font-size-title: 2rem;
+	--font-weight-light: 200;
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;
+	--font-family-sans: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, "sans-serif";
+	--line-height-body: 1.5;
+	--line-height-heading: 1.2;
+	--color-primary: #8c3545;
+	--color-primary-dark: #4e1a24;
+	--color-secondary: #e08442;
+	--color-tertiary: #2e2045;
+	--color-black: #16131d;
+	--color-white: #fff;
+	--color-gray-10: #dcd7e4;
+	--color-gray-30: #ada7b8;
+	--color-gray-50: #888391;
+	--color-gray-70: #55505e;
+	--color-gray-90: #221f27;
+	--full-width: calc( 100% - var( --grid-gap ) * 2 );
+	--container-width: 26rem;
+	--focus-ring: var( --color-secondary ) auto 5px;
+}
+
+@media screen and ( min-width: 768px ) {
+	:root {
+		--font-size-sm: 0.875rem;
+		--font-size-lg: 1.25rem;
+		--font-size-xl: 1.5rem;
+		--font-size-xxl: 1.825rem;
+		--font-size-xxxl: 2.25rem;
+		--font-size-title: 3rem;
+		--grid-gap: 1.5rem;
+		--container-width: 50rem;
+	}
+}
+
+@media screen and ( min-width: 992px ) {
+	:root {
+		--grid-gap: 2rem;
+		--container-width: 64rem;
+	}
+}
+
+@media screen and ( min-width: 1200px ) {
+	:root {
+		--container-width: 80rem;
+	}
+}
