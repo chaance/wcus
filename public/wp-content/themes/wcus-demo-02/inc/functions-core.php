@@ -50,11 +50,11 @@ function setup() : void {
 		call_user_func( "\\add_$hook_type", $hook, $function, $priority, $accepted_args );
 	};
 
-	$hook( 'action', 'after_setup_theme',  'internationalize', 10, 0 );
-	$hook( 'action', 'after_setup_theme',  'handle_theme_support', 10, 0 );
-	$hook( 'action', 'wp_enqueue_scripts', 'scripts', 10, 0 );
-	$hook( 'action', 'wp_enqueue_scripts', 'styles', 10, 0 );
-	$hook( 'action', 'wp_enqueue_scripts', 'detect_js', 0, 0 );
+	$hook( 'action', 'after_setup_theme',     'internationalize', 10, 0 );
+	$hook( 'action', 'after_setup_theme',     'handle_theme_support', 10, 0 );
+	$hook( 'action', 'wp_enqueue_scripts',    'scripts', 10, 0 );
+	$hook( 'action', 'wp_enqueue_scripts',    'styles', 10, 0 );
+	$hook( 'action', 'wp_enqueue_scripts',    'detect_js', 0, 0 );
 	$hook( 'filter', 'add_script_attribute',  'add_script_attribute', 10, 2 );
 }
 
@@ -130,14 +130,10 @@ function handle_theme_support() : void {
 		]
 	);
 	add_theme_support( 'customize-selective-refresh-widgets' );
-
-	// Add featured image sizes.
-	// Sizes are optimized and cropped for landscape aspect ratio and
-	// optimized for HiDPI displays on 'small' and 'medium' screen sizes.
-	// add_image_size( 'featured-small', 640, 9999 );
-	// add_image_size( 'featured-medium', 1280, 9999 );
-	// add_image_size( 'featured-large', 1440, 9999 );
-	// add_image_size( 'featured-xlarge', 1920, 9999 );
+	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'editor.css' );
 
 	// Register nav menus.
 	register_nav_menus(
@@ -158,28 +154,14 @@ function handle_theme_support() : void {
  * @return void
  */
 function scripts() : void {
-	// Deregister the jquery version bundled with WordPress.
-	wp_deregister_script( 'jquery' );
-
-	// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
-	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', [], '3.2.1', false );
-
-	// Deregister the jquery-migrate version bundled with WordPress.
-	wp_deregister_script( 'jquery-migrate' );
-
-	// CDN hosted jQuery migrate for compatibility with jQuery 3.x.
-	wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', [ 'jquery' ], '3.0.1', false );
-	wp_enqueue_script( 'jquery-migrate' );
-
-	// Frontend JS.
-	wp_register_script( 'frontend', get_asset_url( 'js', 'frontend' ), [ 'jquery' ], get_asset_version( 'js', 'frontend' ), true );
+	wp_register_script( 'frontend', WCUS_DEMO_TEMPLATE_URL . '/script.js', array( 'jquery' ), WCUS_DEMO_VERSION, true );
 	wp_localize_script(
-		'frontend', '__WCUS_DEMO', [
+		'frontend', '__WCUS_DEMO', array(
 			'ajaxUrl'  => esc_url( admin_url( 'admin-ajax.php' ) ),
 			'themeUrl' => WCUS_DEMO_TEMPLATE_URL,
 			'nonce'    => wp_create_nonce( 'wcus_demo_nonce' ),
 			'siteUrl'  => site_url(),
-		]
+		)
 	);
 	wp_enqueue_script( 'frontend' );
 
@@ -195,5 +177,5 @@ function scripts() : void {
  * @return void
  */
 function styles() : void {
-	wp_enqueue_style( 'frontend', get_asset_url( 'css', 'frontend' ), [], get_asset_version( 'css', 'frontend' ) );
+	wp_enqueue_style( 'frontend', WCUS_DEMO_TEMPLATE_URL . '/style.css', array(), WCUS_DEMO_VERSION );
 }
